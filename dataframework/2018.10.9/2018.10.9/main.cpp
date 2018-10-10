@@ -8,14 +8,16 @@ bool functions ( vector<int> & seq)
     stack<int> stk;
     int i=1;
     stk.push(i);
+    i++;
     for(int j=0;j<n;++j)
     {
-        if(seq[j]>i)
+        if(seq[j]>=i)
         {
-            for(;i<seq[j];i++)
+            for(;i<=seq[j];i++)
             {
                 stk.push(i);
             }
+            stk.pop();
         }
         else
         {

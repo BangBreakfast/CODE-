@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int res[10020]={};
+int res[100020]={};
 int N;
 struct node
 {
@@ -8,7 +8,7 @@ struct node
     int rb;
     int re;
 };
-node tree[40020]={};
+node tree[500020]={};
 void buildtree(int r,int lf,int rt)
 {
     tree[r].lb=lf;
@@ -32,7 +32,7 @@ int query(int r,int smr)
 }
 int main() {
     cin>>N;
-    int cow[10020]={};
+    int cow[100020]={};
     for(int i=2;i<=N;++i)
     {
         cin>>cow[i];
